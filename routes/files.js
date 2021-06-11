@@ -31,9 +31,9 @@ router.post('/', (req,res)=>{//2nd param req and res hota hai, /api/file server.
     upload(req,res, async (err) => {
         //validiate req: data valid hai ki nhi, ya empty toh nahi
         
-        if(!req.file){//.file ham ek library se dekhenge file, i.e multer, issi se store bhi krenge
-            return res.json({error: 'Please Upload file First'});
-        }
+        // if(!req.file){//.file ham ek library se dekhenge file, i.e multer, issi se store bhi krenge
+        //     return res.json({error: 'Please Upload file First'});
+        // }
         
         if(err){
             return res.status(500).send({error: err.message})//koi error ayi toh
