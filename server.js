@@ -17,7 +17,7 @@ const corsOptions = {
     origin: process.env.ALLOWED_CLIENTS.split(',')//origin pe wo saare options dene hote hain jahan se cors allow karna hai, multiple clients agar use krrhe hain toh simply array use krna hai
     //['http://localhost:3000', 'http://localhost:5000'], aisa receive hoga yahan
 }
-app.use((corsOptions)); //cors is a middleware
+app.use(cors(corsOptions)); //cors is a middleware
 
 //Template engine
 app.set('views', path.join(__dirname, '/views'));//path.join currfolder yaani dirname/views se join krke hmein ek joined utl dedega
