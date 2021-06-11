@@ -16,8 +16,7 @@ connectDB();
 
 const corsOptions = {
     //origin ko ham env mein rkhrhe as a string , yahan array mein receive krna hai toh split krenge
-    //origin: process.env.ALLOWED_CLIENTS.split(','),//origin pe wo saare options dene hote hain jahan se cors allow karna hai, multiple clients agar use krrhe hain toh simply array use krna hai
-    origin: "*",
+    origin: process.env.ALLOWED_CLIENTS.split(','),//origin pe wo saare options dene hote hain jahan se cors allow karna hai, multiple clients agar use krrhe hain toh simply array use krna hai
     //['http://localhost:3000', 'http://localhost:5000'], aisa receive hoga yahan
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"]
