@@ -37,6 +37,7 @@ router.post('/', (req,res)=>{//2nd param req and res hota hai, /api/file server.
         
         if(err){
             return res.status(500).send({error: err.message})//koi error ayi toh
+            console.log(err);
         }
 
 
@@ -85,7 +86,7 @@ router.post('/send', async (req,res)=> {
         sendMail({
             from: emailFrom,
             to: emailTo,
-            subject: 'FileSharing through fileShare',
+            subject: 'FileSharing through easyShare',
             text: `${emailFrom} shared a file with you`,
             html: require('../services/emailTemplate')({
                 emailFrom: emailFrom,
