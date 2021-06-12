@@ -17,9 +17,9 @@
 
   .logo { 
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 400px;
+    top: 0.1%;
+    left: 0.1%;
+    width: 140px;
   }
 section.download {
     background: #fff;
